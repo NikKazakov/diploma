@@ -1,0 +1,84 @@
+[
+    {
+        "name": "DEAUTH_FLOOD",
+        "conditions": [
+            {
+                "pth": "dot11.type",
+                "act": "==",
+                "val": 0
+            },
+            {
+                "pth": "dot11.subtype",
+                "act": "==",
+                "val": 12
+            }
+        ],
+        "actions": [
+            {
+                "act": "print",
+                "obj": "{{count}} pkts at {{radiotap.dbm_antenna_signal}} dBm"
+            }
+        ],
+        "target": 100,
+        "interval": 60,
+        "timeout": 300
+    },
+    {
+        "name": "PSPOLL_FLOOD",
+        "conditions": [
+            {
+                "pth": "dot11.type",
+                "act": "==",
+                "val": 1
+            },
+            {
+                "pth": "dot11.subtype",
+                "act": "==",
+                "val": 10
+            }
+        ],
+        "actions": [
+            {
+                "act": "print",
+                "obj": "{{count}} pkts at {{radiotap.dbm_antenna_signal}} dBm"
+            }
+        ],
+        "target": 100,
+        "interval": 5,
+        "timeout": 300
+    },
+    {
+        "name": "WEP_AP",
+        "conditions": [
+            {
+                "pth": "dot11.type",
+                "act": "==",
+                "val": 0
+            },
+            {
+                "pth": "dot11.subtype",
+                "act": "==",
+                "val": 8
+            },
+            {
+                "pth": "dot11mgmt.fixed.capabilities",
+                "act": "==",
+                "val": 1
+            },
+            {
+                "pth": "dot11mgmt.tagged.rsn_information",
+                "act": "n",
+                "val": null
+            }
+        ],
+        "actions": [
+            {
+                "act": "print",
+                "obj": "AP {{dot11.bssid}} in net {{dot11mgmt.tagged.ssid}}"
+            }
+        ],
+        "target": 5,
+        "interval": 1,
+        "timeout": 3600
+    }
+]

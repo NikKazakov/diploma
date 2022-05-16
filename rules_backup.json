@@ -1,0 +1,236 @@
+[
+  {
+    "name": "IP_WITH_OPTIONS",
+    "conditions":
+            [
+              {
+                "pth": "ipv4.ihl",
+                "act": ">",
+                "val": 5
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  },
+  {
+    "name": "RADIOTAP",
+    "conditions":
+            [
+              {
+                "pth": "radiotap",
+                "act": "y",
+                "val": null
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  },
+  {
+    "name": "DOT11HEADER",
+    "conditions":
+            [
+              {
+                "pth": "dot11_header",
+                "act": "y",
+                "val": null
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  },
+  {
+    "name": "DOT11MGMT",
+    "conditions":
+            [
+              {
+                "pth": "dot11_header.type",
+                "act": "==",
+                "val": 0
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  },
+  {
+    "name": "LLC",
+    "conditions":
+            [
+              {
+                "pth": "llc",
+                "act": "y",
+                "val": null
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  },
+  {
+    "name": "ARP",
+    "conditions":
+            [
+              {
+                "pth": "arp",
+                "act": "y",
+                "val": null
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  },
+  {
+    "name": "IPV4",
+    "conditions":
+            [
+              {
+                "pth": "ipv4",
+                "act": "y",
+                "val": null
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  },
+  {
+    "name": "UDP",
+    "conditions":
+            [
+              {
+                "pth": "udp",
+                "act": "n",
+                "val": null
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  },
+  {
+    "name": "EAP",
+    "conditions":
+            [
+              {
+                "pth": "eap",
+                "act": "y",
+                "val": null
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  },
+  {
+    "name": "DOT1X",
+    "conditions":
+            [
+              {
+                "pth": "dot1x_authentication",
+                "act": "y",
+                "val": null
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  },
+  {
+    "name": "ANY",
+    "conditions":
+            [
+              {
+                "pth": "dot11_header",
+                "act": "n",
+                "val": null
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  },
+  {
+    "name": "ANY",
+    "conditions":
+            [
+              {
+                "pth": "dot11_header",
+                "act": "n",
+                "val": null
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  },
+  {
+    "name": "ANY",
+    "conditions":
+            [
+              {
+                "pth": "dot11_header",
+                "act": "n",
+                "val": null
+              }
+            ],
+    "actions":
+            [
+              {
+                "act": "count",
+                "obj": null
+              }
+            ]
+  }
+]

@@ -1,0 +1,32 @@
+# this file is fully auto-generated
+# the changes you make will not be saved
+//from .FULL_NAME import FULL_NAME_CAMELCASE
+//
+__all__ = [//"FULL_NAME_CAMELCASE", //"get_all_names", "get_full_names", "get_all_full_names", "get_full_name"]
+
+# Returns all protocol names including additional ones
+def get_all_names():
+    return {//'ALT_NAME', ////'FULL_NAME', //}
+
+
+# Returns full names only, one per protocol
+def get_all_full_names():
+    return {//'FULL_NAME', //}
+
+
+# Takes list with names, returns list with full versions of them
+def get_full_names(a: list):
+    ret = []
+
+    //if 'ALT_NAME' in a:
+        ret.append('FULL_NAME')
+    //
+    return ret
+
+
+# Takes a single name, returns full version of it
+def get_full_name(a: str):
+    //if a == 'ALT_NAME':
+        return 'FULL_NAME'
+    //
+    return a

@@ -1,0 +1,93 @@
+import struct
+import extensions
+
+
+class PROTOCOL_CAMELCASE:
+    name = 'PROTOCOL'
+
+    # Fields that come from raw are necessary
+    # Payload can be None cause from_dict can't set it
+    # Then come the unnecessary/additional fields that exist for better naming
+    def __init__(self, //FIELDS_SIMPLE, ////FIELDS_COMPLEX, //payload=None):
+        //self.FIELDS_SIMPLE = FIELDS_SIMPLE
+        ////self.FIELDS_COMPLEX = FIELDS_COMPLEX
+        //
+        self.payload = payload
+
+    def get_all_fields(self, all=False,  repr=False):
+        # if all is set, returns all fields
+        # if repr is set, returns certain fields in human-readable format
+        # returns non-Null (rule.Any, bytes or int) fields by default
+        keys = [//'FIELDS_SIMPLE',
+                ////'FIELDS_COMPLEX.SUBFIELDS',
+                //]
+        values = [//self.FIELDS_SIMPLE,
+                  ////self.FIELDS_COMPLEX.SUBFIELDS,
+                  //]
+        if all:
+            ret = {k: v for (k, v) in zip(keys, values)}
+        else:
+            ret = {k: v for (k, v) in zip(keys, values) if v is not None}
+        if repr:
+            # TODO: convert some fields into human-friendly format
+            pass
+        return ret
+
+    # handle alternative/additional field names
+    @staticmethod
+    def get_full_names(cond):
+        n_cond = {}
+        for field in cond:
+            # TODO: if we have alternative names, replace them here
+            n_cond[field] = cond[field]
+        return n_cond
+
+    def summary(self):
+        # TODO: add description for a certain message here
+        return False
+
+    @classmethod
+    def from_raw(cls, data):
+        # initialize
+        //FIELDS_SIMPLE = None
+        ////FIELDS_COMPLEX = cls.FIELDS_COMPLEX_CAMELCASE(/{None, }/*LEN_FIELDS_COMPLEX)
+        //
+        # get values for fields the packet has
+        # TODO: extract values from data
+
+        # save payload
+        # if we know the next proto, parse the payload
+        # TODO: cut the payload. Extract next protocol, if we can
+        payload = data
+
+        return cls(//FIELDS_SIMPLE, ////FIELDS_COMPLEX, //payload)
+
+    @classmethod
+    def from_dict(cls, cond):
+        # get full names for each field
+        cond = cls.get_full_names(cond)
+
+        # get simple fields user can access
+        //FIELDS_SIMPLE = cond.get('FIELDS_SIMPLE')
+        //
+
+        # initalize alternative fields user can access
+        # TODO: fill this if needed
+
+        # initialise complex/flag fields the user can access
+        //FIELDS_COMPLEX = {}
+        //
+        # collect complex fields into dictionaries
+        for field in cond:
+            pass
+            //if field.startswith('FIELDS_COMPLEX.'):
+                FIELDS_COMPLEX[field.split('.', 1)[1]] = cond[field]
+            //
+        # and initialise them
+        //FIELDS_COMPLEX = cls.FIELDS_COMPLEX_CAMELCASE.from_dict(FIELDS_COMPLEX)
+        //
+        # re-initialise additional/standard stuff users don't have access to
+        # TODO: fill this if needed
+
+        return cls(//FIELDS_SIMPLE, ////FIELDS_COMPLEX, //)
+

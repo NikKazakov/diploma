@@ -1,0 +1,260 @@
+{
+    "llc":{
+        "dsap":null,
+        "ssap":null,
+        "control_field":null,
+        "organization_code":null,
+        "type":null
+    },
+    "dot11_header/dot11":{
+        "frame_control":{
+            "version":null,
+            "type":null,
+            "subtype":null,
+            "to_ds":null,
+            "from_ds":null,
+            "more_fragments":null,
+            "retry":null,
+            "pwr_mgt":null,
+            "more_data":null,
+            "protected":null,
+            "order":null
+        },
+        "duration":null,
+        "receiver":null,
+        "transmitter":null,
+        "destination":null,
+        "sequence_number":null,
+        "fragment_number":null,
+        "address_4":null,
+        "qos_control":{
+            "priority":null,
+            "qos_bit_4":null,
+            "ack_policy":null,
+            "payload_type":null,
+            "second_byte":null
+        },
+        "ccmp":{
+            "pn":null,
+            "ext_iv":null,
+            "key_id":null
+        }
+    },
+    "dot11_management":{
+        "fixed_parameters":{
+            "capabilities_information":{
+                "ess_capabilities":null,
+                "ibss_status":null,
+                "cfp_participation_capabilities":null,
+                "privacy":null,
+                "short_preamble":null,
+                "pbcc":null,
+                "channel_agility":null,
+                "spectrum_management":null,
+                "short_slot_time":null,
+                "automatic_power_save_delivery":null,
+                "radio_measurement":null,
+                "dsss_ofdm":null,
+                "delayed_block_ack":null,
+                "immediate_block_ack":null
+            },
+            "listen_interval":null,
+            "current_ap":null,
+            "status_code":null,
+            "association_id":null,
+            "timestamp":null,
+            "beacon_interval":null,
+            "authentication_algorithm":null,
+            "authentication_seq":null,
+            "action":{
+                "category_code":null,
+                "action_code":null
+            }
+        },
+        "tagged_parameters":{
+            "ssid":null,
+            "supported_rates":null,
+            "traffic_indication_map":null,
+            "country_information":null,
+            "power_constraint":null,
+            "tpc_report_transmit_power":null,
+            "ht_capabilities":null,
+            "ht_information":null,
+            "vht_capabilities":null,
+            "vht_operation":null,
+            "rsn_information":null,
+            "vendor_specific":null,
+            "extended_capabilities":null
+        }
+    },
+    "dot1x_authentication/dot1x_auth":{
+        "version":null,
+        "type":null,
+        "length":null,
+        "key_descriptor_type":null,
+        "key_length":null,
+        "replay_counter":null,
+        "wpa_key_nonce":null,
+        "key_iv":null,
+        "wpa_key_rsc":null,
+        "wpa_key_id":null,
+        "wpa_key_mic":null,
+        "wpa_key_data_length":null,
+        "key_information":{
+            "key_descriptor_version":null,
+            "key_type":null,
+            "key_index":null,
+            "install":null,
+            "key_ack":null,
+            "key_mic":null,
+            "secure":null,
+            "error":null,
+            "request":null,
+            "encrypted_key_data":null,
+            "smk_message":null
+        },
+        "wpa_key_data":{
+            "data":null
+        }
+    },
+    "eap":{
+        "code":null,
+        "id":null,
+        "length":null,
+        "type":null,
+        "identity":null,
+        "tls_length":null,
+        "tls_flags": {
+            "length_included":null,
+            "more_fragments":null,
+            "start":null,
+            "version":null
+        }
+    },
+    "arp": {
+        "hardware_type": null,
+        "protocol_type": null,
+        "hardware_size": null,
+        "protocol_size": null,
+        "opcode": null,
+        "sender_mac": null,
+        "sender_ip": null,
+        "target_mac": null,
+        "target_ip": null
+    },
+    "ether": {
+        "destination": null,
+        "source": null,
+        "length": null
+    },
+    "ipv4": {
+        "version": null,
+        "ihl": null,
+        "dscp": null,
+        "ecn": null,
+        "total_length": null,
+        "identification": null,
+        "flags": null,
+        "fragment_offset": null,
+        "ttl": null,
+        "protocol": null,
+        "header_checksum": null,
+        "source": null,
+        "destination": null,
+        "options": null
+    },
+    "radiotap": {
+        "version": null,
+        "pad": null,
+        "length": null,
+        "present": null,
+        "data_rate": null,
+        "channel_frequency": null,
+        "dbm_antenna_signal": null,
+        "antenna": null,
+        "flags": {
+            "short_gi": null,
+            "bad_fcs": null,
+            "data_pad": null,
+            "fcs_at_end": null,
+            "fragmentation": null,
+            "wep": null,
+            "preamble": null,
+            "cfp": null
+        },
+        "channel_flags": {
+            "quarter_rate_channel": null,
+            "half_rate_channel": null,
+            "static_turbo": null,
+            "gsm": null,
+            "gfsk": null,
+            "dynamic_cck_ofdm": null,
+            "passive": null,
+            "spectrum_5gz": null,
+            "spectrum_2gz": null,
+            "ofdm": null,
+            "cck": null,
+            "turbo": null
+        },
+        "rx_flags": {
+            "bad_plcp": null
+        }
+    },
+    "udp": {
+        "source_port": null,
+        "destination_port": null,
+        "length": null,
+        "checksum": null
+    },
+    "dhcp": {
+        "opcode": null,
+        "hardware_type": null,
+        "hardware_length": null,
+        "hops": null,
+        "transaction_id": null,
+        "seconds_elapsed": null,
+        "flags": {
+            "broadcast": null,
+            "reserved": null
+        },
+        "client_ip": null,
+        "your_ip": null,
+        "server_ip": null,
+        "gateway_ip": null,
+        "client_mac": null,
+        "server_host_name": null,
+        "boot_file": null,
+        "options": {
+            "subnet_mask": null,
+            "router": null,
+            "domain_name_server": null,
+            "host_name": null,
+            "broadcast_address": null,
+            "requested_ip_address": null,
+            "ip_address_lease_time": null,
+            "message_type": null,
+            "server_identifier": null,
+            "request_list": {
+                "items": null
+            },
+            "renewal_time": null,
+            "rebinding_time": null,
+            "vendor_class_identifier": null,
+            "client_identifier": {
+                "hardware_type": null,
+                "client_mac_address": null
+            },
+            "client_fully_qualified_domain_name": {
+                "flags": {
+                    "server_ddns": null,
+                    "encoding": null,
+                    "server_overrides": null,
+                    "server": null
+                },
+                "a_rr_result": null,
+                "ptr_rr_result": null,
+                "client_name": null
+            }
+        }
+    }
+}
